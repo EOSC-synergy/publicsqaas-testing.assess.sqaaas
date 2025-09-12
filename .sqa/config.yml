@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/PalomoIFCA/publicsqaas-testing:
+      branch: main
+      repo: https://github.com/PalomoIFCA/publicsqaas-testing
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-lime-horse.sh
+        container: qc.acc_goopy-olivine-termite
+  QC.Doc:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-aquamarine-dane.sh
+        container: qc.doc_slimy-cinnamon-markhor
+      github.com/PalomoIFCA/publicsqaas-testing git:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-grey-toucan.sh
+        container: qc.doc_pretty-cerulean-caterpillar
+      github.com/PalomoIFCA/publicsqaas-testing markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-mustard-woodlouse.sh
+        container: qc.doc_squirrely-russet-butterfly
+  QC.Lic:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-brass-turtle.sh
+        container: qc.lic_hasty-jade-tapir
+  QC.Sec:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-celadon-numbat.sh
+        container: qc.sec_pokey-cornflower-terrier
+  QC.Sty:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-copper-buzzard.sh
+        container: qc.sty_squirrely-firebrick-giraffe
+  QC.Uni:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-scarlet-heron.sh
+        container: qc.uni_stealthy-cerulean-dodo
+  QC.Ver:
+    repos:
+      github.com/PalomoIFCA/publicsqaas-testing get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-harlequin-rat.sh
+        container: qc.ver_leaky-ecru-iguana
+timeout: 5400
