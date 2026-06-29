@@ -1,11 +1,15 @@
 config:
-  credentials: []
+  credentials:
+  - id: https://github.com/PalomoIFCA/publicsqaas-testing
+    password_var: gAAAAABqQhYyvwODvDwaU-5KcFE4aDcq0C_qts83fghssbnH8clpvCKx9R5iew4t1C5rKnDowIO5iDmbV23iLqcQbe8Js6Weg596VQZQDksODO6fvUpBhoJUtx2Ces_0CNbHDdD9qcT4
+    username_var: gAAAAABqQhYyGGOjqdfWS-dSZxCfr_qrxV2MyxLmzzX8s1xFwmhLr4Dl-05rAdJhovwnIwNILpjAaaIMdTWKIkVYR1i5R97MFQ==
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint_fix
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/PalomoIFCA/publicsqaas-testing:
       branch: main
+      credential_tmp: true
       repo: https://github.com/PalomoIFCA/publicsqaas-testing
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,50 +19,50 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.alabaster_energetic_gazelle.sh
-        container: qc.acc_jade_grateful_ferret
+        - /usr/bin/env sh .sqa/script.storm_empathetic_boar.sh
+        container: qc.acc_dusk_apprehensive_raven
   QC.Doc:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cyan_diligent_capybara.sh
-        container: qc.doc_aqua_savvy_nymph
+        - /usr/bin/env sh .sqa/script.mango_tolerant_quoll.sh
+        container: qc.doc_strawberry_pensive_koala
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.flax_vibrant_ostrich.sh
-        container: qc.doc_olive_audacious_sloth
+        - /usr/bin/env sh .sqa/script.aquamarine_reckless_dormouse.sh
+        container: qc.doc_vermilion_balanced_peacock
       github.com/PalomoIFCA/publicsqaas-testing markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lime_calm_rattlesnake.sh
-        container: qc.doc_cardamom_motivated_frog
+        - /usr/bin/env sh .sqa/script.aqua_kind_armadillo.sh
+        container: qc.doc_marina_radiant_coyote
   QC.Lic:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cardamom_realistic_cockatoo.sh
-        container: qc.lic_byzantium_bold_swan
+        - /usr/bin/env sh .sqa/script.lemon_dedicated_boa.sh
+        container: qc.lic_tan_positive_kingfisher
   QC.Sec:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.carmine_zany_mongoose.sh
-        container: qc.sec_dahlia_inventive_gerbil
+        - /usr/bin/env sh .sqa/script.smoke_kind_ocelot.sh
+        container: qc.sec_slate_easygoing_gazelle
   QC.Sty:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cayenne_plucky_serval.sh
-        container: qc.sty_silver_observant_dugong
+        - /usr/bin/env sh .sqa/script.currant_analytical_dingo.sh
+        container: qc.sty_wheat_scrappy_mongoose
   QC.Uni:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.cloud_outgoing_moose.sh
-        container: qc.uni_cardamom_perky_dingo
+        - /usr/bin/env sh .sqa/script.jasmine_eccentric_sphinx.sh
+        container: qc.uni_orchid_open_panther
   QC.Ver:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.mango_rustic_fox.sh
-        container: qc.ver_khaki_happy_wolf
+        - /usr/bin/env sh .sqa/script.dahlia_visionary_hydra.sh
+        container: qc.ver_wisteria_lucky_snail
 timeout: 5400
