@@ -28,6 +28,7 @@ pipeline {
                         credentialsId: 'https://github.com/PalomoIFCA/publicsqaas-testing'
 
                                      )
+                    echo "DEBUG project_repos: ${projectConfig.config.project_repos}"
                     buildStages(projectConfig)
                 }
             }
