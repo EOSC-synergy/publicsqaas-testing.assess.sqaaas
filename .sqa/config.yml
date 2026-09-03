@@ -20,50 +20,50 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.ginger_loyal_phoenix.sh
-        container: qc.acc_navy_independent_axolotl
+        - /usr/bin/env sh .sqa/script.umber_feisty_cougar.sh
+        container: qc.acc_espresso_respectful_badger
   QC.Doc:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ruby_elated_raccoon.sh
-        container: qc.doc_butter_wise_ostrich
+        - /usr/bin/env sh .sqa/script.mist_skeptical_unicorn.sh
+        container: qc.doc_iris_visionary_hedgehog
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.ice_rugged_viper.sh
-        container: qc.doc_watermelon_philosophical_spren
+        - /usr/bin/env sh .sqa/script.orange_frugal_heron.sh
+        container: qc.doc_sepia_generous_bison
       github.com/PalomoIFCA/publicsqaas-testing markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunset_exuberant_bullfrog.sh
-        container: qc.doc_dusk_reflective_lynx
+        - /usr/bin/env sh .sqa/script.sapphire_productive_beaver.sh
+        container: qc.doc_currant_diligent_moose
   QC.Lic:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.watermelon_mindful_puffin.sh
-        container: qc.lic_green_diplomatic_bear
+        - /usr/bin/env sh .sqa/script.orange_spirited_dragonfly.sh
+        container: qc.lic_silver_lively_opossum
   QC.Sec:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.glacier_polite_salamander.sh
-        container: qc.sec_dusk_reflective_rattlesnake
+        - /usr/bin/env sh .sqa/script.dusk_protective_raven.sh
+        container: qc.sec_coral_perceptive_octopus
   QC.Sty:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.mint_sincere_bear.sh
-        container: qc.sty_jasmine_energetic_kookaburra
+        - /usr/bin/env sh .sqa/script.porcelain_reliable_newt.sh
+        container: qc.sty_raven_witty_starfish
   QC.Uni:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.onyx_feisty_ocelot.sh
-        container: qc.uni_cinnabar_tenacious_elephant
+        - /usr/bin/env sh .sqa/script.wisteria_friendly_koala.sh
+        container: qc.uni_pumpkin_bewildered_roadrunner
   QC.Ver:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.orchid_rugged_kangaroo.sh
-        container: qc.ver_saffron_blissful_echidna
+        - /usr/bin/env sh .sqa/script.white_bright_seal.sh
+        container: qc.ver_ivory_dramatic_quokka
 timeout: 5400
