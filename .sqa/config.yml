@@ -20,50 +20,50 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.ruby_mindful_turtle.sh
-        container: qc.acc_gamboge_tranquil_dingo
+        - /usr/bin/env sh .sqa/script.eggplant_delighted_dragonfly.sh
+        container: qc.acc_mango_organized_shark
   QC.Doc:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sepia_mature_squid.sh
-        container: qc.doc_clove_humble_lemur
+        - /usr/bin/env sh .sqa/script.poppy_eccentric_walrus.sh
+        container: qc.doc_sunset_warm_dhole
       github.com/PalomoIFCA/publicsqaas-testing git:
         commands:
-        - /usr/bin/env sh .sqa/script.cinnamon_tenacious_spren.sh
-        container: qc.doc_carmine_blissful_starfish
+        - /usr/bin/env sh .sqa/script.forest_candid_weasel.sh
+        container: qc.doc_echelon_bold_wolf
       github.com/PalomoIFCA/publicsqaas-testing markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.claret_rustic_newt.sh
-        container: qc.doc_ice_lively_cassowary
+        - /usr/bin/env sh .sqa/script.ash_careful_komodo.sh
+        container: qc.doc_scarlet_feisty_raccoon
   QC.Lic:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.taupe_mindful_bison.sh
-        container: qc.lic_turquoise_frugal_falcon
+        - /usr/bin/env sh .sqa/script.glaucous_upbeat_grizzly.sh
+        container: qc.lic_incarnadine_diplomatic_narwhal
   QC.Sec:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.tangerine_smart_moose.sh
-        container: qc.sec_ice_methodical_kangaroo
+        - /usr/bin/env sh .sqa/script.polar_enthusiastic_whale.sh
+        container: qc.sec_carmine_easygoing_flamingo
   QC.Sty:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.saffron_spontaneous_condor.sh
-        container: qc.sty_moss_brave_nymph
+        - /usr/bin/env sh .sqa/script.raspberry_zealous_peacock.sh
+        container: qc.sty_burgundy_gracious_quoll
   QC.Uni:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.blush_savvy_stingray.sh
-        container: qc.uni_peach_empathetic_hare
+        - /usr/bin/env sh .sqa/script.sand_tolerant_flamingo.sh
+        container: qc.uni_salmon_frugal_kangaroo
   QC.Ver:
     repos:
       github.com/PalomoIFCA/publicsqaas-testing get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cinnamon_courageous_gecko.sh
-        container: qc.ver_red_melancholy_cassowary
+        - /usr/bin/env sh .sqa/script.isabelline_audacious_heron.sh
+        container: qc.ver_gamboge_fearless_goose
 timeout: 5400
